@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+  <title>Tic Toc Toe | Game</title>
+  <script type="text/javascript" src="assets/Js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/Js/script-v2.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="assets/Style/index.css" />
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1"
+  />
+</head>
+<body>
+  <div class="parent">
+    <aside id="mySidenav" class="sidenav">
+      <a class="a handbrg">
+        <i id="btn1" class="fa fa-align-justify navopen" aria-hidden="true"></i
+        ><span class="head">TIC TOC TOE</span>
+      </a>
+      <a class="a play active" href="index.html">
+        <i class="fa fa-gamepad" aria-hidden="true"></i><span>play</span>
+      </a>
+      <a class="a learn_help" href="Learn.html">
+        <i class="fa fa-question-circle" aria-hidden="true"></i
+        ><span>Learn</span>
+      </a>
+      <a class="a result" href="results.html">
+        <i class="fa fa-file" aria-hidden="true"></i><span>Results</span>
+      </a>
+    </aside>
+
+    <main>
+      <div class="overlay"></div>
+
+      <aside id="mobile" class="mobile_view">
+        <button class="btn2">&#9776;</button>
+      </aside>
+
+      <div class="table_parent">
+        <table class="table_child">
+          <tr>
+            <td id="td_0" onclick="myFunction(this,0)"></td>
+            <td id="td_1" onclick="myFunction(this,1)"></td>
+            <td id="td_2" onclick="myFunction(this,2)"></td>
+          </tr>
+          <tr>
+            <td id="td_3" onclick="myFunction(this,3)"></td>
+            <td id="td_4" onclick="myFunction(this,4)"></td>
+            <td id="td_5" onclick="myFunction(this,5)"></td>
+          </tr>
+          <tr>
+            <td id="td_6" onclick="myFunction(this,6)"></td>
+            <td id="td_7" onclick="myFunction(this,7)"></td>
+            <td id="td_8" onclick="myFunction(this,8)"></td>
+          </tr>
+          <tr>
+            <td class="controls refresh" colspan="2" onclick="Reset()">
+              Reset
+            </td>
+            <td class="controls back" colspan="1" onclick="Undo()"></td>
+          </tr>
+        </table>
+
+        <div class="child">
+          <hr id="Line_012" class="done__row done__row--1" />
+          <hr id="Line_048" class="done__diagonal done__diagonal--1" />
+          <hr id="Line_246" class="done__diagonal done__diagonal--2" />
+          <hr id="Line_345" class="done__row done__row--2" />
+          <hr id="Line_678" class="done__row done__row--3" />
+          <hr id="Line_036" class="done__row done__row--4" />
+          <hr id="Line_147" class="done__row done__row--5" />
+          <hr id="Line_258" class="done__row done__row--6" />
+        </div>
+      </div>
+    </main>
+  </div>
+</body>

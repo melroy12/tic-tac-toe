@@ -1,0 +1,285 @@
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  margin: 0;
+  flex: 1;
+  height: 100vh;
+  position: relative;
+  background-color: #222629;
+}
+
+/*------------------side nav style---------------*/
+.sidenav {
+  height: 100vh;
+  width: 60px;
+  overflow: hidden;
+  background-color: #4cb69f;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 12px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #fff;
+  display: flex;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.sidenav a:hover {
+  color: #bcbeb9;
+}
+
+.a span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.sidenav a.active {
+  color: #47434f;
+}
+
+.sidenav .play a.active {
+  color: #47434f;
+}
+
+.sidenav .learn a.active {
+  color: #47434f;
+}
+
+/*-------------------mobile view------------------*/
+.mobile_view {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+}
+
+.btn2 {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 450px) {
+  .sidenav {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+  }
+  .sidenav {
+    width: 0px;
+    z-index: 1;
+  }
+  .table_parent {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .mobile_view {
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .overlay {
+    display: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+  }
+
+  .btn2 {
+    visibility: visible;
+    background-color: #4cb69f;
+    font-size: 40px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+/*-------------tic toc toe table style---------------*/
+
+.table_parent {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  margin: auto;
+}
+
+.table_child {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  color: white;
+  width: 33.33%;
+  height: 25%;
+  font-size: 40px;
+  text-align: center;
+  border-right: 2px solid white;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #595959;
+}
+
+tr {
+  border: 4px solid white;
+}
+
+.done__row {
+  background-color: #4bb69f;
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  border: none;
+}
+
+.done__diagonal {
+  background-color: #4bb69f;
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  border: none;
+}
+
+.done__row--1 {
+  display: none;
+  width: 80%;
+  left: 10%;
+  top: 10.5%;
+}
+
+.back {
+  cursor: pointer;
+  background-image: url(https://cdn.iconscout.com/icon/premium/png-512-thumb/back-left-arrow-direction-orientation-path-52303.png);
+  object-fit: fill;
+  background-position: center;
+  background-size: 46% 46%;
+  background-repeat: no-repeat;
+}
+
+.done__diagonal--1 {
+  display: none;
+  width: 85%;
+  left: 8%;
+  top: 35.5%;
+  transform: rotate(39deg);
+}
+.done__diagonal--2 {
+  display: none;
+  width: 85%;
+  left: 8%;
+  top: 35.5%;
+  transform: rotate(-39deg);
+}
+
+.done__row--2 {
+  display: none;
+  width: 80%;
+  left: 10%;
+  top: 35.5%;
+}
+
+.done__row--3 {
+  display: none;
+  width: 80%;
+  left: 10%;
+  top: 60.5%;
+}
+
+.done__row--5 {
+  display: none;
+  width: 70%;
+  left: 15%;
+  top: 35.5%;
+  transform: rotate(90deg);
+}
+.done__row--4 {
+  display: none;
+  width: 70%;
+  left: -18%;
+  top: 35.5%;
+  transform: rotate(90deg);
+}
+.done__row--6 {
+  display: none;
+  width: 70%;
+  left: 48%;
+  top: 35.5%;
+  transform: rotate(90deg);
+}
+
+/*-----------Learn page style---------------*/
+.parent1 {
+  margin: 5%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.child1 {
+  width: 30%;
+  color: #123;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 19px 11px 20px 20px rgba(0, 0, 0, 0.2);
+  border: 5px solid #eee;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.4s;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+.About {
+  text-align: justify;
+  padding: 10px;
+}
+
+.child1:hover {
+  transform: scale(0.9, 0.9);
+  transition: ease 0.3s;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+@media screen and (max-width: 650px) {
+  .parent1 {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+  .child1 {
+    height: 250px;
+    width: 100%;
+    margin-top: 5%;
+    overflow: scroll;
+  }
+}
